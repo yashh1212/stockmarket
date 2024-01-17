@@ -1,0 +1,6 @@
+django
+yahoo_fin
+pymysql
+yfinance
+scikit-learn
+quandl

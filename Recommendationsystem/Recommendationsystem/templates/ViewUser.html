@@ -1,0 +1,83 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body style="background-color:#981275">
+
+<div class="container" style="background-color:#ffffff;">
+<h1 > Share Market Prediction System</h1>
+<br/>
+<div class="topnav">
+  <a class="active" href="userhome">Home</a>
+  <a href="stockpred">Stock Prediction</a>
+ <a href="livestock">View Live Stocks</a>
+   <a href="mysearches">My Searches</a>
+  <a href="mywatchlist">My Watchlist</a>
+  <a href="logout">LogOut</a>
+</div>
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<br/>
+<h4>Registered User</h4>
+<table class="table">
+<tr>
+<td>Name</td>
+<td>Contact</td>
+<td>Email</td>
+</tr>
+     {% for result in list.items %}
+ 
+         <tr> 
+         <td>
+         {{result.name}}
+         </td>
+        <td>
+         {{result.contact}}
+         </td>
+         <td>
+         {{result.email}}
+         </td>
+         </tr>
+        <br/>
+     {% endfor %}
+</table>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

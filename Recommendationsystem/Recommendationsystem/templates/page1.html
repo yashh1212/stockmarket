@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body style="background-image: url('{% static 'stock.jpg' %}');background-repeat:no-repeat;background-size:cover;">
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
+<br/>
+<br/>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<br/>
+<h3>Stock Market Prediction System</h3>
+<br/>
+
+<form action="userlogin" method="post">
+<input type="text" class="form-control" name="email" placeholder="Enter Username">
+<br/>
+
+<input type="password" class="form-control" name="pass" placeholder="Enter Password">
+<br/>
+<input type="submit" value="Login">
+<br/>
+<b style="color:red;">{{data}}<b>
+<br/>
+</form>
+<a href="register">NewRegistration</a>
+</div>
+</div>
+
+
+</div>
+<div class="col-md-4"></div>
+
+</div>
+
+</div>
+</body>
+</html>
